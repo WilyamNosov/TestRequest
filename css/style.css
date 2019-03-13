@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #003d34;
+    padding: 0 9%;
+    overflow: auto;
+}
+
+.name, .menu a{
+    color: #fff;
+    font-size: 30px;
+    padding: 14px 24px;
+    float: left;
+}
+
+.name, .menu {
+    width: max-content;
+}
+
+.menu {
+    float: right;
+}
+
+.menu ul {
+    margin: 0;
+    overflow: auto;
+}
+
+.menu a {
+    text-decoration: none;
+    border-left: 2px solid #Fff;
+    transform: 0.4s,
+}
+
+.menu a:last-child {
+    border-right: 2px solid #fff;
+}
+
+.menu a:hover {
+    background-color: rgba(0, 179, 73, 0.7);
+}
+
+.menu li {
+    list-style: none;
+}
+
