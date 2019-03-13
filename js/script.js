@@ -1,6 +1,6 @@
 var table = document.querySelector('tbody');
 
-var requestJson = 'https://raw.githubusercontent.com/WilyamNosov/Web-Labs/master/toPars.json';
+var requestJson = 'https://raw.githubusercontent.com/WilyamNosov/TestRequest/master/js/toPars.json?token=AYg32RbP7OnRPxRjrsm9yGCa4YXse5_Jks5ciOsVwA%3D%3D';
 var request = new XMLHttpRequest();
 request.open('GET', requestJson);
 
