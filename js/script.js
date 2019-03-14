@@ -10,19 +10,29 @@ request.send();
 request.onload = function() {
 	var peoples = request.response;
 	createPeople(peoples);
-	var timerId = setInterval(function() {
+	var timer = setInterval(function() {
+		reOpenJson();
   		createPeople(peoples);
 	}, 300000);
 }
 
+function reOpenJson(){
+	request = new XMLHttpRequest();
+	request.open('GET', requestJson);
+
+	request.responseType = 'json';
+	request.send();
+}
+
 function createPeople(jsonObj){
 	var tableLenght = document.getElementsByTagName('tr');
-	
+
 	var peoplesList = jsonObj['employee'];
 
 	for (var i = tableLenght.length - 1; i < peoplesList.length; i++) {
 
 		var trElem = document.createElement('tr');
+		var tdElem = document.createElement('td');
 		var tdId = document.createElement('td');
 		var tdFirstName = document.createElement('td');
 		var tdLastdName = document.createElement('td');
@@ -34,8 +44,8 @@ function createPeople(jsonObj){
 		trElem.appendChild(tdId);
 		trElem.appendChild(tdFirstName);
 		trElem.appendChild(tdLastdName);
-		trElem.appendChild(tdId);
 
 		table.appendChild(trElem);
 	}
+	request.abort();
 }
