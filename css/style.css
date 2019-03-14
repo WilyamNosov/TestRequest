@@ -32,7 +32,7 @@ header {
 .menu a {
     text-decoration: none;
     border-left: 2px solid #Fff;
-    transform: 0.4s,
+    transition: 0.4s;
 }
 
 .menu a:last-child {
@@ -47,3 +47,34 @@ header {
     list-style: none;
 }
 
+.wrapper {
+    margin: 0 9%;
+}
+
+table {
+    width: 40%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-top: 35px;
+}
+
+table tr:nth-child(1n) {
+    background-color: #003d34;
+}
+
+table tr:nth-child(2n) {
+    background-color: #007939;
+}
+
+table tr:first-child td {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+td {
+    padding: 10px 14px;
+    font-size: 16px;
+    color: #fff;
+    border-right: 1px solid #fff;
+}

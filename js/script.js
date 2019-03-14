@@ -11,7 +11,7 @@ request.onload = function() {
 	var peoples = request.response;
 	var timerId = setInterval(function() {
   		createPeople(peoples);
-	}, 2000);
+	}, 300000);
 }
 
 function createPeople(jsonObj){
@@ -19,7 +19,7 @@ function createPeople(jsonObj){
 	
 	var peoplesList = jsonObj['employee'];
 
-	for (var i = tableLenght.length; i < peoplesList.length; i++) {
+	for (var i = tableLenght.length - 1; i < peoplesList.length; i++) {
 
 		var trElem = document.createElement('tr');
 		var tdId = document.createElement('td');
