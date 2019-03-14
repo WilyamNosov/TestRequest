@@ -8,6 +8,7 @@ request.responseType = 'json';
 request.send();
 
 request.onload = function() {
+	createPeople(peoples);
 	var peoples = request.response;
 	var timerId = setInterval(function() {
   		createPeople(peoples);
