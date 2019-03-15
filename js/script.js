@@ -11,17 +11,8 @@ request.onload = function() {
 	var peoples = request.response;
 	createPeople(peoples);
 	var timer = setInterval(function() {
-		reOpenJson();
   		createPeople(peoples);
 	}, 300000);
-}
-
-function reOpenJson(){
-	request = new XMLHttpRequest();
-	request.open('GET', requestJson);
-
-	request.responseType = 'json';
-	request.send();
 }
 
 function createPeople(jsonObj){
