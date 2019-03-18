@@ -10,9 +10,6 @@ request.send();
 request.onload = function() {
 	var peoples = request.response;
 	createPeople(peoples);
-	// var timer = setInterval(function() {
- //  		createPeople(peoples);
-	// }, 300000);
 }
 
 function createPeople(jsonObj){
